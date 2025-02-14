@@ -17,7 +17,7 @@ app.post("/referral", async (req, res) => {
     const newReferral = await prisma.referral.create({
       data: { referrerName, referrerEmail, refereeName, refereeEmail },
     });
-    // console.log(newReferral);
+    console.log(newReferral);
     res.status(201).json(newReferral);
   } catch (error) {
     res.status(400).json({ error: error.message });
