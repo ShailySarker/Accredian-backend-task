@@ -27,6 +27,8 @@ app.post("/referral", async (req, res) => {
 // 🔄 Get all referrals
 app.get("/referrals", async (req, res) => {
   const referrals = await prisma.referral.findMany();
+  console.log(referrals);
+
   res.json(referrals);
 });
 
